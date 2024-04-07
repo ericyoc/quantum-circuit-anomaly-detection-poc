@@ -1,6 +1,6 @@
 # Quantum Circuit Anomaly Detection Against Adversarial Attacks
 
-This Python code demonstrates a quantum anomaly detection approach using the Cirq library, designed to detect adversarial attacks on quantum circuits. The code simulates adversarial attacks by introducing noise in the form of random rotations on qubits, mimicking potential real-world attack scenarios.
+This Python code demonstrates a quantum anomaly detection approach using the Cirq library, designed to detect adversarial attacks on quantum circuits. The code simulates adversarial attacks by introducing noise in the form of random rotations on qubits, mimicking potential real-world attack scenarios. Additionally, it includes features for adjusting the anomaly detection threshold and exploring the impact of noise on quantum circuits.
 
 ## Quantum Circuit Design
 
@@ -8,19 +8,39 @@ The quantum circuit used for anomaly detection is built upon the following steps
 
 1. **Data Encoding**: The input data (e.g., MNIST handwritten digit images) is flattened and scaled to the range [0, π]. Each scaled value is encoded as a rotation around the Y-axis (`cirq.ry`) on a corresponding qubit.
 
-2. **Superposition Creation**: A Hadamard gate (`cirq.H`) is applied to each qubit, creating an equal superposition of all possible states.
+2. **Superposition Creation**: A Hadamard gate (`cirq.ry`) is applied to each qubit, creating an equal superposition of all possible states.
 
 3. **Adversarial Attack Simulation**: To simulate an adversarial attack, random rotations around the Y-axis (`cirq.ry`) are applied to a subset of qubits with a specified probability (`noise_probability`). These random rotations represent the injected noise or errors.
 
 4. **Measurement**: Finally, all qubits are measured using the `cirq.measure` operation, and the measurement results are stored under the key 'result'.
 
-The quantum circuit is designed to be sensitive to changes in the input data and the simulated adversarial attacks. By analyzing the non-zero amplitudes of the final state vector, the anomaly detection model can identify deviations from the expected behavior, indicating potential anomalies or adversarial attacks.
-
 ## Anomaly Detection Algorithm
 
 The anomaly detection algorithm calculates an anomaly score based on the non-zero amplitudes of the final state vector after applying the quantum circuit. A higher anomaly score indicates a potential anomaly or adversarial attack.
 
-By comparing the results of the anomaly detection model with and without the simulated adversarial attacks (random rotations), the code demonstrates how quantum computing can potentially enhance the detection of adversarial attacks on quantum circuits.
+The code includes a configurable threshold value (`threshold`) for classifying data points as anomalies or not. If the calculated anomaly score is greater than or equal to the threshold, the data point is classified as an "Anomaly". The threshold value can be adjusted to balance the trade-off between detecting anomalies and avoiding false positives.
+
+## Simulating Adversarial Attacks
+
+Adversarial attacks on quantum circuits are simulated by introducing random rotations around the Y-axis (`cirq.ry`) with random angles to a subset of qubits. This noise operation can disrupt the quantum state of the qubits, mimicking the effects of an adversarial attack.
+
+The impact of noise or adversarial attacks can differ between the model with anomaly detection and the model without anomaly detection:
+
+- **Model without Anomaly Detection**: Noise may lead to errors or inconsistencies in the predicted labels, but the impact is limited to the accuracy of the predictions.
+
+- **Model with Anomaly Detection**: Noise can significantly affect the calculation of anomaly scores, potentially leading to incorrect anomaly classifications (false positives or false negatives).
+
+## Mitigating Adversarial Attacks
+
+To mitigate the impact of noise and adversarial attacks on quantum circuits, various techniques can be employed:
+
+- **Error Correction and Fault-Tolerant Quantum Computing**: Implementing error correction schemes and fault-tolerant techniques to detect and correct errors introduced by noise or attacks.
+
+- **Quantum Circuit Hardening**: Designing quantum circuits that are more resilient to noise and attacks, such as using robust gate implementations or incorporating randomization techniques.
+
+- **Adversarial Training**: Training the quantum anomaly detection model with adversarial examples to improve its robustness against adversarial attacks.
+
+- **Quantum-Secure Cryptographic Protocols**: Employing quantum-secure cryptographic protocols to protect the communication and data exchange between the classical and quantum components of the system.
 
 ## Significance and Applications
 
@@ -39,7 +59,7 @@ The code provides functions to test the anomaly detection model with and without
 To run the code, follow these steps:
 
 1. Install the required dependencies: `cirq`, `tensorflow`, `numpy`, `matplotlib`, and `tabulate`.
-2. Set the desired parameters, such as the number of qubits, batch size, and noise probability.
+2. Set the desired parameters, such as the number of qubits, batch size, noise probability, and anomaly detection threshold.
 3. Run the `main()` function to execute the anomaly detection pipeline.
 
 ## Contributions
