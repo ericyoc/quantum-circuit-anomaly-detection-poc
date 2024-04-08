@@ -18,14 +18,23 @@ The quantum circuit used for anomaly detection is built upon the following steps
 
 The anomaly detection algorithm calculates an anomaly score based on the non-zero amplitudes (Cirq) or probabilities (PennyLane) of the final state vector or computational basis states after applying the quantum circuit. A higher anomaly score indicates a potential anomaly or adversarial attack.
 
-**Cirq and Pennylane Example - Without Anomaly Detection:**
+**Cirq - Without Anomaly Detection:**
 
-![Quantum Circuit Prediction Without Anomaly Detection](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/without_det_qan_circ.jpg)
+![Cirq - Quantum Circuit Prediction Without Anomaly Detection](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/without_det_qan_circ.jpg)
 
 
-**Cirq and Pennylane Example - With Anomaly Detection:**
+**Pennylane - Without Anomaly Detection:**
+
+![Pennylane - Quantum Circuit Prediction Without Anomaly Detection](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/without_quant_det_pennylane.jpg)
+
+**Cirq - With Anomaly Detection:**
 
 ![Quantum Circuit Prediction With Anomaly Detection](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/with_det_qant_cir.jpg)
+
+**Pennylane - With Anomaly Detection:**
+
+![Pennylane - Quantum Circuit Prediction Without Anomaly Detection](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/with_det_quant_pennylane.jpg)
+
 
 The code includes a configurable threshold value (`threshold`) for classifying data points as anomalies or not. If the calculated anomaly score is greater than or equal to the threshold, the data point is classified as an "Anomaly". The threshold value can be adjusted to balance the trade-off between detecting anomalies and avoiding false positives.
 
