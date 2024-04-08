@@ -20,6 +20,8 @@ The anomaly detection algorithm calculates an anomaly score based on the non-zer
 
 The code includes a configurable threshold value (`threshold`) for classifying data points as anomalies or not. If the calculated anomaly score is greater than or equal to the threshold, the data point is classified as an "Anomaly". The threshold value can be adjusted to balance the trade-off between detecting anomalies and avoiding false positives.
 
+![Quantum Circuit Anomaly Detection Results](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/quant_circ_anom_det_table.jpg) 
+
 ## Simulating Adversarial Attacks
 
 Adversarial attacks on quantum circuits are simulated by introducing random rotations around the Y-axis (`cirq.ry`) with random angles to a subset of qubits. This noise operation can disrupt the quantum state of the qubits, mimicking the effects of an adversarial attack.
