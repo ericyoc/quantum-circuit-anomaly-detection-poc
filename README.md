@@ -18,12 +18,12 @@ The quantum circuit used for anomaly detection is built upon the following steps
 
 The anomaly detection algorithm calculates an anomaly score based on the non-zero amplitudes (Cirq) or probabilities (PennyLane) of the final state vector or computational basis states after applying the quantum circuit. A higher anomaly score indicates a potential anomaly or adversarial attack.
 
-**Cirq - Without Anomaly Detection:**
+**Cirq and Pennylane Example - Without Anomaly Detection:**
 
 ![Quantum Circuit Prediction Without Anomaly Detection](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/without_det_qan_circ.jpg)
 
 
-**Cirq - With Anomaly Detection:**
+**Cirq and Pennylane Example - With Anomaly Detection:**
 
 ![Quantum Circuit Prediction With Anomaly Detection](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/with_det_qant_cir.jpg)
 
@@ -31,7 +31,14 @@ The code includes a configurable threshold value (`threshold`) for classifying d
 
 **Cirq Detection Outcomes**
 
-![Quantum Circuit Anomaly Detection Results](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/quant_circ_anom_det_table.jpg) 
+![Cirq - Quantum Circuit Anomaly Detection Outcomes](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/quant_circ_anom_det_table.jpg) 
+
+
+**Pennylane Detection Outcomes**
+
+![Pennylane Quantum Circuit Anomaly Detection Outcomes](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/pennylane_table.jpg) 
+
+
 
 ## Simulating Adversarial Attacks
 
