@@ -18,6 +18,10 @@ The quantum circuit used for anomaly detection is built upon the following steps
 
 The anomaly detection algorithm calculates an anomaly score based on the non-zero amplitudes of the final state vector after applying the quantum circuit. A higher anomaly score indicates a potential anomaly or adversarial attack.
 
+**Without Anomaly Detection**
+
+![Quantum Circuit Prediction Without Anomaly Detection](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/without_det_qan_circ.jpg)
+
 The code includes a configurable threshold value (`threshold`) for classifying data points as anomalies or not. If the calculated anomaly score is greater than or equal to the threshold, the data point is classified as an "Anomaly". The threshold value can be adjusted to balance the trade-off between detecting anomalies and avoiding false positives.
 
 ![Quantum Circuit Anomaly Detection Results](https://github.com/ericyoc/quantum-circuit-anomaly-detection/blob/main/quant_circ_anom_det_table.jpg) 
