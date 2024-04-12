@@ -3,8 +3,7 @@
 This Python code demonstrates a quantum anomaly detection approach using the Cirq and PennyLane libraries, designed to detect adversarial attacks on quantum circuits. The code simulates adversarial attacks by introducing noise in the form of random rotations on qubits, mimicking potential real-world attack scenarios. Additionally, it includes features for adjusting the anomaly detection threshold and exploring the impact of noise on quantum circuits.
 
 ## Motivating Article
-Gong, W., Yuan, D., Li, W., & Deng, D. L. (2024, April 4). Enhancing quantum adversarial robustness by randomized encodings. Physical Review Research, 6(2). doi: 10.1103/physrevresearch.6.023020. 
-https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.023020
+Gong, W., Yuan, D., Li, W., & Deng, D. L. (2024, April 4). Enhancing quantum adversarial robustness by randomized encodings. Physical Review Research, 6(2). doi: 10.1103/physrevresearch.6.023020.
 
 ## Quantum Circuit Design
 
