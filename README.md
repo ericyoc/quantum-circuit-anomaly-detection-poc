@@ -118,3 +118,7 @@ Contributions to this project are welcome! If you have any improvements, bug fix
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+**Disclaimer**
+This repository is intended for educational and research purposes.
+
